@@ -8,7 +8,7 @@ form.addEventListener('submit', function(e){
     const results = document.querySelector('#results');
 
     if (height === '' || height < 0 || isNaN(height)){
-        results.textContent = 'Please fill valid weight';
+        results.textContent = 'Please fill valid height';
     }
 
     else if (weight === '' || weight < 0 || isNaN(weight)){
@@ -16,7 +16,7 @@ form.addEventListener('submit', function(e){
     }
 
     else{
-        const bmi = (weight / ((height * height) / 1000)).toFixed(2);
+        const bmi = (weight / ((height * height) / 10000)).toFixed(2);
         if (bmi < 18.6){
             results.textContent = `Your BMI is ${bmi}, You are Underweight
             `;
